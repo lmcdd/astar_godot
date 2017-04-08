@@ -49,20 +49,13 @@ func create_points(tilemap, tile = 0):
 	for cx in range(SIZE_MAP.x):
 		for cy in range(SIZE_MAP.y):	
 			if tilemap.get_cell(cx, cy) == tile:
+				var t = Vector2(cx, cy)		
 				for d in dirs:
-					if (not(cx == 0 and cy == 0 and (d.x == 0 and d.y == -1) and (d.x == -1 and d.y == -1) and (d.x == -1 and d.y == 0)) and 
-				    	not(cx == SIZE_MAP.x - 1 and cy == 0 and (d.x == 0 and d.y == -1) and (d.x == 1 and d.y == -1) and (d.x == 1 and d.y == 0)) and 
-						not(cx == 0 and cy == SIZE_MAP.y - 1 and (d.x == 0 and d.y == 1) and (d.x == -1 and d.y == 0) and (d.x == -1 and d.y == 1)) and 
-						not(cx == SIZE_MAP.x - 1 and cy == SIZE_MAP.y - 1 and (d.x == 0 and d.y == 1) and (d.x == 1 and d.y == 1) and (d.x == 1 and d.y == 0)) and 
-						not(cx == SIZE_MAP.x - 1 and d.x == 1) and
-						not(cx == 0 and d.x == -1) and
-						not(cy == SIZE_MAP.y - 1 and d.y == 1) and
-						not(cy == 0 and d.y == -1)
-						):
-						var t = Vector2(cx, cy)
+					if not( (t + d).x in [SIZE_MAP.x - 1, 0] and (t + d).y in [SIZE_MAP.y - 1, 0] ):
 						if tilemap.get_cell(cx + d.x, cy + d.y) == tile:
 							as.connect_points(as.get_closest_point(Vector3(t.x, t.y, 0)), as.get_closest_point(Vector3(t.x + d.x, t.y + d.y,0)))
 							set_bound(t, t + d)
+						
 	update()
 	set_process(true)
 
