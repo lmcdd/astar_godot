@@ -51,10 +51,11 @@ func create_points(tilemap, tile = 0):
 			if tilemap.get_cell(cx, cy) == tile:
 				var t = Vector2(cx, cy)		
 				for d in dirs:
-					if not( (t + d).x in [SIZE_MAP.x, -1] or (t + d).y in [SIZE_MAP.y, -1] ):
-						if tilemap.get_cell(cx + d.x, cy + d.y) == tile:
-							as.connect_points(as.get_closest_point(Vector3(t.x, t.y, 0)), as.get_closest_point(Vector3(t.x + d.x, t.y + d.y,0)))
-							set_bound(t, t + d)
+					var td = t + d
+					if not( td.x in [SIZE_MAP.x, -1] or td.y in [SIZE_MAP.y, -1] ):
+						if tilemap.get_cell(td.x, td.y) == tile:
+							as.connect_points(as.get_closest_point(Vector3(t.x, t.y, 0)), as.get_closest_point(Vector3(td.x, td.y, 0)))
+							set_bound(t, td)
 						
 	update()
 	set_process(true)
