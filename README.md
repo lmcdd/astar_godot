@@ -4,6 +4,6 @@ An example of work in A* Godot.
 
 ![alt text](scr/image.png "Half offset = Disable")
 
-![alt text](scr/imageX.png "Half offset = X")
+![alt text](scr/imageX.PNG "Half offset = X")
 
-![alt text](scr/imageY.png "Half offset = Y")
+![alt text](scr/imageY.PNG "Half offset = Y")
