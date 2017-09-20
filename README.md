@@ -2,8 +2,8 @@
 
 An example of work in A* Godot.
 
-![Half offset = Disable](src/image.png)
+![alt text](src/image.png "Half offset = Disable")
 
-![Half offset = X](src/imageX.png)
+![alt text](src/imageX.png "Half offset = X")
 
-![Half offset = Y](src/imageY.png)
+![alt text](src/imageY.png "Half offset = Y")
