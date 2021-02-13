@@ -1,6 +1,6 @@
-# A* in Godot 3.0
+# A* in Godot 3.2
 
-An example of work in A* Godot.
+An example of work in A* Godot, using AStar2D node.
 
 ![alt text](scr/image.png "Half offset = Disable")
 
