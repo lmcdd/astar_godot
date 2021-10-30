@@ -2,8 +2,8 @@
 
 An example of work in A* Godot, using AStar2D node.
 
-![alt text](scr/image.png "Half offset = Disable")
+![alt text](screenshots/disabled.png "Half offset = Disable")
 
-![alt text](scr/imageX.PNG "Half offset = X")
+![alt text](screenshots/x_offset.PNG "Half offset = X")
 
-![alt text](scr/imageY.PNG "Half offset = Y")
+![alt text](screenshots/y_offset.PNG "Half offset = Y")
